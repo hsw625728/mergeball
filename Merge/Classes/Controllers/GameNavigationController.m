@@ -94,7 +94,7 @@ SINGLETON_IMPL(GameNavigationController);
 		/* Score fields */
 		_nameScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 40)];
 		_nameScoreLabel.font = [UIFont fontWithName:SCORE_LABEL_FONT size:14];
-		_nameScoreLabel.text = @"score";
+		_nameScoreLabel.text = @"得分";
 		_nameScoreLabel.alpha = 0.65;
 		_nameScoreLabel.textAlignment = NSTextAlignmentRight;
 		_nameScoreLabel.textColor = [UIColor whiteColor];
@@ -108,7 +108,7 @@ SINGLETON_IMPL(GameNavigationController);
 		
 		_nameTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(262, 0, 50, 40)];
 		_nameTimeLabel.font = _nameScoreLabel.font;
-		_nameTimeLabel.text = @"spawns";
+		_nameTimeLabel.text = @"菌落";
 		_nameTimeLabel.alpha = _nameScoreLabel.alpha;
 		_nameTimeLabel.textAlignment = NSTextAlignmentLeft;
 		_nameTimeLabel.textColor = [UIColor whiteColor];
@@ -158,7 +158,7 @@ SINGLETON_IMPL(GameNavigationController);
 		[self.view addSubview:_playButton];
 		{
 			UILabel *label = [[UILabel alloc] initWithFrame:_playButton.bounds];
-			label.text = @"PLAY";
+			label.text = @"开始";
 			label.font = [UIFont fontWithName:MENU_FONT size:28];
 			label.textAlignment = NSTextAlignmentCenter;
 			label.userInteractionEnabled = NO;
@@ -182,7 +182,7 @@ SINGLETON_IMPL(GameNavigationController);
 		[self.view addSubview:_scoresButton];
 		{
 			UILabel *label = [[UILabel alloc] initWithFrame:_scoresButton.bounds];
-			label.text = @"HIGH SCORES";
+			label.text = @"排 行 榜";
 			label.font = [UIFont fontWithName:MENU_FONT size:28];
 			label.textAlignment = NSTextAlignmentCenter;
 			label.userInteractionEnabled = NO;
@@ -205,7 +205,7 @@ SINGLETON_IMPL(GameNavigationController);
 		[self.view addSubview:_instrButton];
 		{
 			UILabel *label = [[UILabel alloc] initWithFrame:_instrButton.bounds];
-			label.text = @"INSTRUCTIONS";
+			label.text = @"规则说明";
 			label.font = [UIFont fontWithName:MENU_FONT size:28];
 			label.textAlignment = NSTextAlignmentCenter;
 			label.userInteractionEnabled = NO;
@@ -221,7 +221,7 @@ SINGLETON_IMPL(GameNavigationController);
 		
 		/* Game over */
 		_gameOverMsg = [[UILabel alloc] initWithFrame:CGRectMake(10, _boardContainer.frame.origin.y - 30, 300, 30)];
-		_gameOverMsg.text = @"GAME OVER :(";
+		_gameOverMsg.text = @"游戏结束 :(";
 		_gameOverMsg.textColor = [UIColor whiteColor];
 		_gameOverMsg.font = [UIFont fontWithName:MENU_FONT size:20];
 		_gameOverMsg.textAlignment = NSTextAlignmentCenter;
@@ -536,7 +536,7 @@ SINGLETON_IMPL(GameNavigationController);
 	}];
 			
 	/* Change play button label */
-	_playButtonLabel.text = @"PLAY AGAIN";
+	_playButtonLabel.text = @"再来一次";
 	
 }
 

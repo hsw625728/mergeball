@@ -43,7 +43,6 @@
 		35722EB618D248A8008D71F9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35722EB418D248A8008D71F9 /* AVFoundation.framework */; };
 		35722EB718D248A8008D71F9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35722EB518D248A8008D71F9 /* GameKit.framework */; };
 		35722EBB18D24977008D71F9 /* ShapeCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35722EBA18D24977008D71F9 /* ShapeCellView.m */; };
-		35A46E2E18ECE0DE00201F7D /* libFlurry_4.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A46E2D18ECE0DE00201F7D /* libFlurry_4.4.0.a */; };
 		35A46E3118ECE19300201F7D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A46E3018ECE19300201F7D /* SystemConfiguration.framework */; };
 		35A46E4018EF22B300201F7D /* beat1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 35A46E3318EF22B300201F7D /* beat1.caf */; };
 		35A46E4118EF22B300201F7D /* beat2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 35A46E3418EF22B300201F7D /* beat2.caf */; };
@@ -134,9 +133,6 @@
 		35722EB518D248A8008D71F9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		35722EB918D24977008D71F9 /* ShapeCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeCellView.h; sourceTree = "<group>"; };
 		35722EBA18D24977008D71F9 /* ShapeCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeCellView.m; sourceTree = "<group>"; };
-		35A46E2C18ECE0DE00201F7D /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		35A46E2D18ECE0DE00201F7D /* libFlurry_4.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.4.0.a; sourceTree = "<group>"; };
-		35A46E2F18ECE0FD00201F7D /* FlurryKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryKey.h; sourceTree = "<group>"; };
 		35A46E3018ECE19300201F7D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		35A46E3318EF22B300201F7D /* beat1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beat1.caf; sourceTree = "<group>"; };
 		35A46E3418EF22B300201F7D /* beat2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beat2.caf; sourceTree = "<group>"; };
@@ -172,7 +168,6 @@
 				35A46E3118ECE19300201F7D /* SystemConfiguration.framework in Frameworks */,
 				35722EB618D248A8008D71F9 /* AVFoundation.framework in Frameworks */,
 				35722EB718D248A8008D71F9 /* GameKit.framework in Frameworks */,
-				35A46E2E18ECE0DE00201F7D /* libFlurry_4.4.0.a in Frameworks */,
 				35722E6D18D21B5B008D71F9 /* CoreGraphics.framework in Frameworks */,
 				35722E6F18D21B5B008D71F9 /* UIKit.framework in Frameworks */,
 				35722E6B18D21B5B008D71F9 /* Foundation.framework in Frameworks */,
@@ -262,7 +257,6 @@
 		35722E7018D21B5B008D71F9 /* Merge */ = {
 			isa = PBXGroup;
 			children = (
-				35A46E2A18ECE0DE00201F7D /* External */,
 				35722E9918D24770008D71F9 /* Classes */,
 				35722E7918D21B5B008D71F9 /* AppDelegate.h */,
 				35722E7A18D21B5B008D71F9 /* AppDelegate.m */,
@@ -363,24 +357,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		35A46E2A18ECE0DE00201F7D /* External */ = {
-			isa = PBXGroup;
-			children = (
-				35A46E2B18ECE0DE00201F7D /* Flurry */,
-			);
-			path = External;
-			sourceTree = "<group>";
-		};
-		35A46E2B18ECE0DE00201F7D /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				35A46E2F18ECE0FD00201F7D /* FlurryKey.h */,
-				35A46E2C18ECE0DE00201F7D /* Flurry.h */,
-				35A46E2D18ECE0DE00201F7D /* libFlurry_4.4.0.a */,
-			);
-			path = Flurry;
-			sourceTree = "<group>";
-		};
 		35A46E3218EF22B300201F7D /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,7 +439,7 @@
 				ORGANIZATIONNAME = "Jason Fieldman";
 				TargetAttributes = {
 					35722E6618D21B5B008D71F9 = {
-						DevelopmentTeam = 887CVK63XR;
+						ProvisioningStyle = Manual;
 					};
 					35722E8118D21B5B008D71F9 = {
 						TestTargetID = 35722E6618D21B5B008D71F9;
@@ -678,7 +654,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 887CVK63XR;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Merge/Merge-Prefix.pch";
 				INFOPLIST_FILE = "Merge/Merge-Info.plist";
@@ -686,7 +662,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Merge/External/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.merge;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.mergeball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -708,9 +684,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Merge/External/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.merge;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.mergeball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b504982d-ec9b-44ac-9b08-97c5704e0153";
+				PROVISIONING_PROFILE_SPECIFIER = mergeball;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
